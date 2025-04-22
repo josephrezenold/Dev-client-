@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev Infotech</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .btn-custom {
+            background: linear-gradient(45deg, #e63946, #8e2de2);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+
+            padding: 60px 40px;
+            background-color: #000;
+            gap: 30px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            max-width: 600px;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            color: #ccc;
+        }
+
+        .services {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 60px 20px;
+        }
+
+        .card {
+            width: 160px;
+            height: 300px;
+            border-radius: 20px;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.1);
+            z-index: 10;
+        }
+
+        .card-label {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .tech-stack {
+            text-align: center;
+            margin: 60px 0 20px;
+        }
+
+        .tech-marquee {
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+        }
+
+        .tech-icons {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 25s linear infinite;
+        }
+
+        .tech-icons img {
+            height: 40px;
+            margin: 0 30px;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 60px 0;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, red, purple, white);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 100px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background: purple;
+            border-radius: 50%;
+            border: 4px solid white;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        .timeline-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding-top: 50px;
+        }
+
+        .timeline-left,
+        .timeline-right {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .timeline-left {
+            text-align: right;
+        }
+
+        .timeline-right p {
+            max-width: 500px;
+        }
+
+        img {
+            border-radius: 12px;
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-dot {
+                left: 20px;
+            }
+
+            .timeline-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .timeline-left {
+                text-align: center;
+            }
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .why-choose {
+            background-color: #f5f5f5;
+            color: #000;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .why-choose h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .metrics-box {
+            background: linear-gradient(to right, #ff416c, #8e2de2);
+            border-radius: 20px;
+            color: #fff;
+            padding: 20px 40px;
+            display: inline-block;
+            margin: 30px auto;
+            font-weight: bold;
+        }
+
+        .features-list {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            max-width: 600px;
+            margin: 0 auto;
+            gap: 30px;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .feature-icon {
+            background: #fff;
+            padding: 15px;
+            border-radius: 50%;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .floating-message {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #212121;
+            color: #fff;
+            padding: 15px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            font-weight: 600;
+            animation: fadeInSlideUp 1s ease-out;
+        }
+
+        .clients-section {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: white;
+        }
+
+        .clients-section h2 {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .clients-section .subtitle {
+            font-size: 24px;
+            color: #4b5563;
+            margin-bottom: 40px;
+        }
+
+        .clients-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .client-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 150px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+
+        .client-box:hover {
+            transform: scale(1.05);
+        }
+
+        .client-box img {
+            max-width: 100%;
+            max-height: 60px;
+            object-fit: contain;
+        }
+
+        .marquee {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+
+        .marquee-content {
+            display: flex;
+            gap: 20px;
+            animation: scroll 20s linear infinite;
+        }
+
+        .marquee:hover .marquee-content {
+            animation-play-state: paused;
+        }
+
+        .about-us-section {
+            padding: 80px 0;
+            background: #fff;
+        }
+
+        .stat-box {
+            background: linear-gradient(135deg, #ffffff, #f9f9f9);
+            border: 1px solid #eee;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+            flex: 1;
+        }
+
+        .stat-box h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .stat-box p {
+            font-size: 1.1rem;
+            color: #444;
+        }
+
+        .about-icon {
+            max-width: 100px;
+        }
+
+        .subtitle {
+            font-weight: 500;
+            text-transform: uppercase;
+            color: #333;
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+
+        .about-heading {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .about-text {
+            font-size: 1.05rem;
+            color: #444;
+            margin-bottom: 30px;
+        }
+
+        .know-more-btn {
+            background: linear-gradient(to right, red, purple);
+            color: white;
+            padding: 10px 25px;
+            font-weight: 600;
+            border-radius: 8px;
+            border: 2px solid #4a001e;
+            text-decoration: none;
+        }
+
+        .know-more-btn:hover {
+            background: linear-gradient(to right, #ff4d4d, #aa00ff);
+            color: #fff;
+        }
+
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0%);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* Keep the client-box styles */
+        .client-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 150px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 auto;
+            transition: transform 0.3s ease;
+        }
+
+        .client-box img {
+            max-width: 100%;
+            max-height: 60px;
+            object-fit: contain;
+        }
+
+        .swiper {
+            padding: 2rem 1rem;
+        }
+
+        .swiper-slide {
+            background-color: #edf3f9;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            max-width: 500px;
+        }
+
+        .carousel-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+
+        .carousel-card-body {
+            padding: 1.5rem;
+        }
+
+        .carousel-card-body small {
+            display: block;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .carousel-card-body h5 {
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .carousel-card-body p {
+            font-size: 0.95rem;
+            color: #333;
+            margin-bottom: 0;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #e50914, #a239ca, #6f42c1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .arrow {
+            font-size: 1em;
+            display: inline-block;
+            transform: translateY(-5px);
+        }
+
+        .footer-link {
+            display: block;
+            color: #ccc;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            transition: color 0.2s ease-in-out;
+        }
+
+        .footer-link:hover {
+            color: #fff;
+        }
+
+        .footer-icon {
+
+            font-size: 1.25rem;
+            transition: color 0.3s;
+        }
+
+        .footer-icon:hover {
+            color: #a239ca;
+        }
+
+        /* Responsive fix */
+        @media (max-width: 768px) {
+            .swiper-slide {
+                max-width: 90%;
+            }
+        }
+
+        @keyframes fadeInSlideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .card {
+                width: 120px;
+                height: 220px;
+            }
+        }
+
+        .serv {
+            width: 160px;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            flex: 0 0 auto;
+            transition: flex-grow 0.4s ease, transform 0.4s ease;
+        }
+
+        /* Container must be flex */
+        .services .d-flex {
+            display: flex;
+            gap: 10px;
+        }
+
+        /* When hovering over one card */
+        .services .d-flex:hover .serv {
+            flex-grow: 1;
+        }
+
+        .services .d-flex:hover .serv:hover {
+            flex-grow: 2;
+            transform: scale(1.02);
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 py-4">
+        <a class="navbar-brand" href="#">
+            <img src="WhatsApp Image 2025-04-16 at 21.44.06_72ddf838.jpg" alt="Dev Logo" style="height:80px; width:90px;" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Our Works</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Blogs</a></li>
+                <li class="nav-item">
+                    <button class="btn-custom">Speak With Us</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="row container">
+        <section class="hero col-lg-6 col-12 " data-aos="fade-up">
+            <p>Empowering Innovation, Delivery Excellence</p>
+            <h1>Expert IT Services and Consulting for Modern Businesses</h1>
+            <button class="btn-custom">Get Start Today</button>
+        </section>
+        <section class="services col-6 d-none d-lg-block">
+            <div class="d-flex justify-content-between flex-wrap gap-2">
+                <div class="card serv webt" style="background-image: url('th.jpg');" data-aos="zoom-in">
+                    <div class="card-label">Web Development</div>
+                </div>
+
+                <div class="card serv mobt" style="background-image: url('download.jpg');" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="card-label">Mobile App Development</div>
+                </div>
+
+                <div class="card serv prodt" style="background-image: url('p.jpg');" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="card-label">Product Development</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <div style="background-color: black;">
+        <div class="tech-stack" data-aos="fade-up">
+            <h2>Technologies We Work</h2>
+        </div>
+        <div class="tech-marquee my-4" style=" height: 100px;">
+            <div class="tech-icons">
+                <!-- Add these inside .tech-icons -->
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" alt="Tailwind CSS" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+
+
+            </div>
+        </div>
+    </div>
+
+    <section class="why-choose" data-aos="fade-up">
+        <h2>Why Choose Us</h2>
+        <p class="mt-3">
+            Dev Infotech delivers innovative, reliable, and scalable solutions
+            tailored to your business needs, ensuring a seamless digital
+            transformation journey.
+        </p>
+        <div class="metrics-box mt-4">
+            <div class="d-flex justify-content-center gap-5">
+                <div>
+                    <span style="font-size: 2rem">08</span><br />Years Experiences
+                </div>
+                <div>
+                    <span style="font-size: 2rem">550+</span><br />Successful Projects
+                </div>
+            </div>
+        </div>
+        <div class="features-list mt-5">
+            <div class="feature" data-aos="fade-right">
+                <div class="feature-icon">🏆</div>
+                <div>
+                    <strong>Client-Centric Approach</strong>
+                    <p class="mb-0">Focused on your success.</p>
+                </div>
+            </div>
+            <div class="feature" data-aos="fade-left">
+                <div class="feature-icon">👥</div>
+                <div>
+                    <strong>Expert Team</strong>
+                    <p class="mb-0">Skilled professionals driving excellence.</p>
+                </div>
+            </div>
+            <div class="feature" data-aos="fade-right">
+                <div class="feature-icon">✔️</div>
+                <div>
+                    <strong>Quality Assurance</strong>
+                    <p class="mb-0">Uncompromised, high-standard results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="floating-message">
+        Explore our services and get in touch today!
+    </div>
+
+    <center>
+        <h1 style="padding: 30px;">Our Services</h1>
+    </center>
+    <div class="container timeline">
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <div class="timeline-left">
+                    <h2>Mobile App Development</h2>
+                </div>
+                <div class="timeline-right">
+                    <p>
+                        Creating powerful mobile applications for Android and iOS. Our
+                        team specializes in delivering feature-rich, user-friendly apps
+                        that scale.
+                    </p>
+                    <img src="ma.jpg" alt="Mobile App" />
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <div class="timeline-left">
+                    <h2>Web Development</h2>
+                </div>
+                <div class="timeline-right">
+                    <p>
+                        Our web app development services aim to improve your company's operations through the development of reliable, scalable, and secure applications. We offer the skills and expertise needed needed to deliver outstanding results, whether we're creating business solutions or custom web-based applications.
+                    </p>
+                    <img src="web.jpg" alt="Web Dev" />
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <div class="timeline-left">
+                    <h2>AI / ML</h2>
+                </div>
+                <div class="timeline-right">
+                    <p>
+                        Leverage the power of artificial intelligence and machine learning to drive innovation and gain a competitive edge. Our AI and ML services include data analysis, NLP, custom algorithms, and AI-powered automation to transform your business operations.
+                    </p>
+                    <img src="ai.jpg" alt="AI ML" />
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <div class="timeline-left">
+                    <h2>SaaS Solutions</h2>
+                </div>
+                <div class="timeline-right">
+                    <p>
+                        Develop scalable, secure, and user-friendly SaaS applications with Dev Infotech. We specialize in multi-tenant architecture, API development, subscription management, and ensuring compliance with industry standards.
+
+                    </p>
+                    <img src="saas.jpg" alt="SaaS" />
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <div class="timeline-left">
+                    <h2>Digital Marketing</h2>
+                </div>
+                <div class="timeline-right">
+                    <p>
+                        Our digital marketing services, like SEO, PPC, social media marketing, and content marketing, will help you improve your online visibility. You may reach your target audience and increase conversions with the aid of our data-driven methods.
+                    </p>
+                    <img src="dm.jpg" alt="Marketing" />
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <div class="timeline-left">
+                    <h2>Branding</h2>
+                </div>
+                <div class="timeline-right">
+                    <p>
+                        To help you in creating an effective and lasting brand presence, Dev Infotech offers complete branding services. We develop an integrated personality that speaks to those you want to reach, starting with brand strategy and ending with logo design and content.
+
+                    </p>
+                    <img src="Branding.jpg" style="height: 300px;" alt="Branding" />
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <div class="timeline-left">
+                    <h2>UI/UX Design</h2>
+                </div>
+                <div class="timeline-right">
+                    <p>
+                        Intuitive interfaces and user flows that boost engagement and
+                        usability.
+                    </p>
+                    <img src="7e3aaade-4be8-47a8-aa6c-fe6f0c220316-cover.png" style="height: 300px;" alt="UI/UX" />
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <div class="timeline-left">
+                    <h2>Technical Support</h2>
+                </div>
+                <div class="timeline-right">
+                    <p>
+                        Reliable support teams to troubleshoot, maintain, and optimize
+                        your software and systems.
+                    </p>
+                    <img src="ts.jpg" alt="Support" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <section class="clients-section">
+        <div class="container">
+            <h2 style="color:#000">Clients</h2>
+            <p class="subtitle">
+                Our clients are everything to us; so are we to them.
+            </p>
+            <div class="marquee">
+                <div class="marquee-content">
+                    <!-- Client logos (duplicated for seamless scrolling) -->
+                    <div class="client-box">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="Amazon Web Services" />
+                    </div>
+                    <div class="client-box">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoft/microsoft-original.svg" alt="Microsoft" />
+                    </div>
+                    <div class="client-box">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google" />
+                    </div>
+                    <div class="client-box">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/meta/meta-original.svg" alt="Meta" />
+                    </div>
+                    <div class="client-box">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg" alt="Apple" />
+                    </div>
+                    <div class="client-box">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
+                    </div>
+                    <div class="client-box">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" />
+                    </div>
+                    <div class="client-box">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg" alt="Slack" />
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about-us-section">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <!-- Stats -->
+                <div class="col-md-4">
+                    <div class="stat-box mb-4">
+                        <h2 style="color: black">550+</h2>
+                        <p>Finished Projects</p>
+                    </div>
+                    <div class="d-flex">
+                        <div class="stat-box me-3">
+                            <h2 style="color: black">340+</h2>
+                            <p>Happy Clients</p>
+                        </div>
+                        <div class="stat-box">
+                            <h2 style="color: black">25+</h2>
+                            <p>Skilled Team Members</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Center Icon -->
+                <div class="col-md-2 text-center my-4 my-md-0">
+                    <img src="WhatsApp Image 2025-04-16 at 21.44.06_72ddf838.jpg" alt="Diamond Icon" class="about-icon" />
+                </div>
+
+                <!-- About Content -->
+                <div class="col-md-5 containn">
+                    <p class="subtitle">INNOVATING SOLUTIONS</p>
+                    <h2 class="about-heading" style="color:gray">About Us</h2>
+                    <p class="about-text">
+                        Dev Infotech is a leading software development company in Chennai, India, dedicated to helping businesses achieve their digital goals. With a team of experienced professionals and a passion for innovation, we deliver high-quality solutions that drive growth and success.
+                    </p>
+                    <a href="#about" class="btn know-more-btn">Know More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <h1 style="font:bolder; padding: 30px;" class="gradient-text display-1 fw-bold">Insights</h1>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <!-- Card 1 -->
+                <div class="swiper-slide">
+                    <div class="carousel-card">
+                        <img src="Top-10-Mobile-App-Development-Companies-in-India-Blog-thumbnail.jpg" alt="Card Image" />
+                        <div class="carousel-card-body">
+                            <small>June 21, 2024</small>
+                            <h5 style="color:#000">Top 10+ Mobile App Development Companies in India.</h5>
+                            <p>
+                                In the pursuit of discovering the untapped advantages for your
+                                business, securing the right app development partner is
+                                crucial.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="swiper-slide">
+                    <div class="carousel-card">
+                        <img src="sof.jpg" alt="Card Image" />
+                        <div class="carousel-card-body">
+                            <small>June 22, 2024</small>
+                            <h5 style="color:#000">
+                                2024 Software Development Trends Explained With Benefits and
+                                Use Cases!!
+                            </h5>
+                            <p>
+                                The software landscape is evolving rapidly due to AI,
+                                blockchain, and market demands. Here's what you need to know.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="swiper-slide">
+                    <div class="carousel-card">
+                        <img src="dev.jpg" alt="Card Image" />
+                        <div class="carousel-card-body">
+                            <small>May 12, 2024</small>
+                            <h5 style="color:#000">Top DevOps Practices to Accelerate Cloud Development</h5>
+                            <p>
+                                Learn how to streamline deployment cycles with CI/CD pipelines
+                                and containerization in cloud apps.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="swiper-slide">
+                    <div class="carousel-card">
+                        <img src="aiml.jpg" alt="Card Image" />
+                        <div class="carousel-card-body">
+                            <small>April 29, 2024</small>
+                            <h5 style="color:#000">How AI is Transforming Custom Software Development</h5>
+                            <p>
+                                Explore the ways artificial intelligence is speeding up and
+                                enhancing development processes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="swiper-slide">
+                    <div class="carousel-card">
+                        <img src="Blockchain-Technology-in-Supply-Chain-SIPMM-696x435.jpg" alt="Card Image" />
+                        <div class="carousel-card-body">
+                            <small>March 15, 2024</small>
+                            <h5 style="color:#000">Blockchain in Enterprise Software: Use Cases in 2024</h5>
+                            <p>
+                                From supply chain to finance, blockchain integration is
+                                reshaping how software secures and processes data.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="swiper-slide">
+                    <div class="carousel-card">
+                        <img src="vr.jpg" alt="Card Image" />
+                        <div class="carousel-card-body">
+                            <small>February 5, 2024</small>
+                            <h5 style="color:#000">AR & VR Development: Top Trends Driving the Future</h5>
+                            <p>
+                                Immersive technology is going mainstream. Here are the tools,
+                                stacks, and ideas driving the innovation forward.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr />
+
+    <footer class="text-white pt-5" style="background-color: #000">
+        <div class="container text-center text-md-start">
+            <!-- Let's Talk Block -->
+            <div class="mb-5">
+                <p class="fs-5 fw-light mb-2">
+                    We would love to hear from you and collaborate on<br />
+                    something that build the world.
+                </p>
+                <h1 class="gradient-text display-1 fw-bold mb-0">
+                    Let’s Talk <span class="arrow">↗</span>
+                </h1>
+            </div>
+
+            <hr class="border-secondary my-5" />
+
+            <!-- Footer Columns -->
+            <div class="row text-start">
+                <!-- Company -->
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold">Company</h5>
+                    <ul class="list-unstyled mt-3">
+                        <li><a href="#" class="footer-link">Our Works</a></li>
+                        <li><a href="#" class="footer-link">About Us</a></li>
+                        <li><a href="#" class="footer-link">Blogs</a></li>
+                        <li><a href="#" class="footer-link">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold">Services</h5>
+                    <ul class="list-unstyled mt-3">
+                        <li><a href="#" class="footer-link">Experience Design</a></li>
+                        <li><a href="#" class="footer-link">Website Development</a></li>
+                        <li>
+                            <a href="#" class="footer-link">Mobile App Development</a>
+                        </li>
+                        <li><a href="#" class="footer-link">WordPress development</a></li>
+                        <li><a href="#" class="footer-link">Shopify Development</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social -->
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold">Follow Us</h5>
+                    <div class="d-flex gap-3 mt-3">
+                        <a href="#" class="footer-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="footer-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="footer-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="footer-icon"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <hr>
+    <footer class="text-center py-4 text-light">
+        <p>&copy; 2025 Dev Infotech. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    </script>
+    <!-- Swiper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper(".mySwiper", {
+            slidesPerView: "auto",
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                },
+                1200: {
+                    slidesPerView: 2.5,
+                },
+            },
+        });
+    </script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        ScrollReveal().reveal('nav', {
+            origin: 'center',
+            distance: '50px',
+            duration: 1000,
+            delay: 100,
+            easing: 'ease-in-out',
+            reset: false // for animation to repeat on scroll
+        });
+        ScrollReveal().reveal('.hero', {
+            origin: 'left',
+            distance: '200px',
+            duration: 2000,
+            delay: 200,
+            easing: 'ease-in-out',
+            reset: true // for animation to repeat on scroll
+        });
+        ScrollReveal().reveal('.timeline-left', {
+            origin: 'left',
+            distance: '400px',
+            duration: 1000,
+            delay: 150,
+            easing: 'ease-in-out',
+            reset: false // for animation to repeat on scroll
+        });
+        ScrollReveal().reveal('.timeline-right', {
+            origin: 'right',
+            distance: '400px',
+            duration: 1000,
+            delay: 150,
+            easing: 'ease-in-out',
+            reset: false // for animation to repeat on scroll
+        });
+        ScrollReveal().reveal('.stat-box', {
+            origin: 'bottom',
+            distance: '100px',
+            duration: 2000,
+            delay: 150,
+            easing: 'ease-in-out',
+            reset: false // for animation to repeat on scroll
+        });
+        ScrollReveal().reveal('.containn', {
+            origin: 'right',
+            distance: '150px',
+            duration: 2000,
+            delay: 150,
+            easing: 'ease-in-out',
+            reset: false // for animation to repeat on scroll
+        });
+        ScrollReveal().reveal('.gradient-text', {
+            origin: 'left',
+            distance: '150px',
+            duration: 2000,
+            delay: 150,
+            easing: 'ease-in-out',
+            reset: false // for animation to repeat on scroll
+        });
+        ScrollReveal().reveal('.footer-link', {
+            origin: 'right',
+            distance: '150px',
+            duration: 1000,
+            delay: 150,
+            easing: 'ease-in-out',
+            reset: true // for animation to repeat on scroll
+        });
+    </script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        document.querySelectorAll(".timeline-item").forEach((item) => {
+            const dot = item.querySelector(".timeline-dot");
+
+            gsap.to(dot, {
+                y: () => item.offsetHeight - 100,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: item,
+                    start: "top center",
+                    end: "bottom center",
+                    scrub: true,
+                },
+            });
+        });
+    </script>
+</body>
+
+</html>
