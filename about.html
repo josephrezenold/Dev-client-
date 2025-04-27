@@ -26,15 +26,15 @@
             <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Blogs</a></li>
             <li class="nav-item">
-                <button class="btn-custom">Speak With Us</button>
+                <button class="btn-nav">Speak With Us</button>
             </li>
         </ul>
     </div>
 </nav>
 
-<header data-aos="zoom-in-down" data-aos-delay="200">
+<header data-aos="zoom-in-down" data-aos-delay="200" class="section-dark" style="color: white;">
   <h1>About Us</h1>
-  <p class="lead">Empowering your business through strategic consulting</p>
+  <p class="lead" style="color: white;">Empowering your business through strategic consulting</p>
 </header>
 
 <!-- Who We Are Section -->
@@ -46,7 +46,7 @@
       </div>
       <div class="col-md-6">
         <h2>Who We Are</h2><br>
-        <p>So, what is Dev? We’re a thriving community for workplace conversations, driven by a simple mission to make worklife better, together.<br><br>
+        <p style="color: black;">So, what is Dev? We’re a thriving community for workplace conversations, driven by a simple mission to make worklife better, together.<br><br>
           But the way we do it? That’s not so simple.<br><br>
           Every day, we’re inspired to build a healthier, more transparent work community for all. Through the products we make and the communities we create, we’re breaking down barriers that lead to discrimination, pay gaps and toxic work environments. 
           Together, we’re fostering a world where people have the support and resources they need to make the most of their worklife.</p>
@@ -57,23 +57,29 @@
 
 <!-- What We Do Section -->
 <section class="section-dark py-5" data-aos="zoom-in-up" data-aos-delay="400">
-  <div class="container">
+  <div class="container pad">
     <h2 class="text-center headop mb-4">What We Do</h2>
-    <div class="what-we-do-card">
-      <div class="row text-center">
-        <div class="col-md-4 mb-4 mb-md-0" data-aos="flip-left">
+    
+    <!-- First Row -->
+    <div class="row text-center">
+      <div class="col-md-4 mb-4" data-aos="flip-left">
+        <div class="what-we-do-card p-4 h-100">
           <i class="fas fa-chart-line weicons"></i>
           <h5>Business Strategy</h5>
           <p>We dive deep into your business model, industry trends, and competitive landscape to craft data-driven strategies that fuel sustainable growth.
              Whether you're looking to scale, pivot, or optimize, our tailored approach ensures every move is intentional and impactful.</p>
         </div>
-        <div class="col-md-4 mb-4 mb-md-0" data-aos="flip-up">
+      </div>
+      <div class="col-md-4 mb-4" data-aos="flip-up">
+        <div class="what-we-do-card p-4 h-100">
           <i class="fas fa-cogs weicons"></i>
           <h5>Operational Excellence</h5>
           <p>We refine your core operations by identifying inefficiencies and implementing streamlined processes that reduce costs and 
             enhance productivity. From supply chain improvements to workflow automation, we enable your business to run smarter and leaner.</p>
         </div>
-        <div class="col-md-4" data-aos="flip-right">
+      </div>
+      <div class="col-md-4 mb-4" data-aos="flip-right">
+        <div class="what-we-do-card p-4 h-100">
           <i class="fas fa-laptop-code weicons"></i>
           <h5>Digital Transformation</h5>
           <p>We guide your business through the digital shift by integrating modern technologies that align with your goals. Whether 
@@ -82,38 +88,35 @@
         </div>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- Driving Force -->
-<section class="section-mid py-5" data-aos="fade-up">
-  <div class="container">
-    <h2 class="text-center mb-5">Our Driving Force</h2>
-    <div class="row text-center">
-      <div class="col-md-4" data-aos="flip-left">
-        <div class="card what-we-do-card">
-          <h5>Client-Centric Vision</h5>
-          <p>Your goals are our compass. We ensure every project is aligned with your business objectives, 
-            delivering not just results—but real, measurable impact. Our success is defined by the value we create for you..</p>
+    <!-- Second Row -->
+    <div class="row text-center mt-4">
+      <div class="col-md-4 mb-4" data-aos="flip-left">
+        <div class="what-we-do-card p-4 h-100">
+          <i class="fas fa-bullhorn weicons"></i>
+          <h5>Marketing Strategy</h5>
+          <p>We craft compelling marketing campaigns that connect with your audience, drive engagement, and build lasting brand loyalty across all digital channels.</p>
         </div>
       </div>
-      <div class="col-md-4" data-aos="flip-up">
-        <div class="card what-we-do-card">
-          <h5>Innovation First</h5>
-          <p>We don’t just keep up with trends—we set them. Our team embraces bold, forward-thinking ideas to develop unique
-             solutions that give you a clear edge in a rapidly evolving market.</p>
+      <div class="col-md-4 mb-4" data-aos="flip-up">
+        <div class="what-we-do-card p-4 h-100">
+          <i class="fas fa-shield-alt weicons"></i>
+          <h5>Risk Management</h5>
+          <p>We assess your potential risks and develop proactive strategies that protect your business, ensuring continuity and resilience against unexpected challenges.</p>
         </div>
       </div>
-      <div class="col-md-4" data-aos="flip-right">
-        <div class="card what-we-do-card">
-          <h5>Data-Driven Excellence</h5>
-          <p>Every decision we make is grounded in data. By combining analytics with deep business insight, we help you make smarter moves,
-             reduce risk, and maximize performance across the board.</p>
+      <div class="col-md-4 mb-4" data-aos="flip-right">
+        <div class="what-we-do-card p-4 h-100">
+          <i class="fas fa-lightbulb weicons"></i>
+          <h5>Innovation Consulting</h5>
+          <p>We unlock creativity within your teams, helping you ideate, prototype, and launch innovative products and services that set you apart from competitors.</p>
         </div>
       </div>
     </div>
+
   </div>
 </section>
+
 
 <!-- Our Clients -->
 <section class="section-light py-5">
@@ -150,20 +153,31 @@
   </div>
 </section>
 
-<!-- Meet the Team -->
-<section class="section-dark py-5" data-aos="fade-up" data-aos-delay="500">
-  <div class="container">
-    <h2 class="text-center mb-5" style="color: white;">Meet the Team</h2>
+<!-- Driving Force -->
+<section class="section-dark py-5" data-aos="fade-up">
+  <div class="container pad">
+    <h2 class="text-center headop mb-5">Our Driving Force</h2>
     <div class="row text-center">
-      <div class="col-md-6 team-card">
-        <img src="https://via.placeholder.com/300x200" class="team-img" alt="Jane Doe">
-        <h4 style="color: white;">Jane Doe – Founder & CEO</h4>
-        <p style="color: white;">With over 15 years in business strategy, Jane has led transformational projects across multiple industries.</p>
+      <div class="col-md-4" data-aos="flip-left">
+        <div class="card what-we-do-card">
+          <h5>Client-Centric Vision</h5>
+          <p>Your goals are our compass. We ensure every project is aligned with your business objectives, 
+            delivering not just results—but real, measurable impact. Our success is defined by the value we create for you..</p>
+        </div>
       </div>
-      <div class="col-md-6 team-card">
-        <img src="https://via.placeholder.com/300x200" class="team-img" alt="John Smith">
-        <h4 style="color: white;">John Smith – Lead Consultant</h4>
-        <p style="color: white;">Specializing in operations and efficiency, John helps companies reduce waste and optimize performance.</p>
+      <div class="col-md-4" data-aos="flip-up">
+        <div class="card what-we-do-card">
+          <h5>Innovation First</h5>
+          <p>We don’t just keep up with trends—we set them. Our team embraces bold, forward-thinking ideas to develop unique
+             solutions that give you a clear edge in a rapidly evolving market.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="flip-right">
+        <div class="card what-we-do-card">
+          <h5>Data-Driven Excellence</h5>
+          <p>Every decision we make is grounded in data. By combining analytics with deep business insight, we help you make smarter moves,
+             reduce risk, and maximize performance across the board.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -226,8 +240,27 @@
   </div>
 </section>
 
+<!-- Meet the Team -->
+<section class="section-dark py-5" data-aos="fade-up" data-aos-delay="500">
+  <div class="container">
+    <h2 class="text-center mb-5" style="color: white;">Meet the Team</h2>
+    <div class="row text-center">
+      <div class="col-md-6 team-card">
+        <img src="https://via.placeholder.com/300x200" class="team-img" alt="Jane Doe">
+        <h4 style="color: white;">Jane Doe – Founder & CEO</h4>
+        <p style="color: white;">With over 15 years in business strategy, Jane has led transformational projects across multiple industries.</p>
+      </div>
+      <div class="col-md-6 team-card">
+        <img src="https://via.placeholder.com/300x200" class="team-img" alt="John Smith">
+        <h4 style="color: white;">John Smith – Lead Consultant</h4>
+        <p style="color: white;">Specializing in operations and efficiency, John helps companies reduce waste and optimize performance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="feedback-section">
-  <h2><i class="fas fa-comment-dots"></i> Client Feedback</h2>
+  <h2 style="color: #1e3232;;"><i class="fas fa-comment-dots"></i> Client Feedback</h2>
   <div class="feedback-grid">
     
     <div class="feedback-card">
@@ -278,10 +311,10 @@
 <!-- Contact Section -->
 <section class="contact-section py-5" id="contact">
   <div class="container">
-    <h2 class="text-center mb-5 text-light" data-aos="fade-up" style="color: #2973B2 !important;">Get In Touch</h2>
+    <h2 class="text-center mb-5 text-light" data-aos="fade-up" style="color: #fbfbfb !important;">Get In Touch</h2>
     <div class="row justify-content-center">
       <div class="col-md-8">
-        <div class="contact-card p-4" data-aos="fade-up" style="border-radius: 15px; background-color: #9ACBD0;">
+        <div class="contact-card p-4" data-aos="fade-up" style="border-radius: 15px; background-color: #1A1A1A;">
           <form>
             <div class="mb-3">
               <label for="name" class="form-label text-light">Name</label>
@@ -296,7 +329,7 @@
               <textarea class="form-control custom-input" id="message" rows="5" placeholder="How can we help?"></textarea>
             </div>
             <div class="text-end">
-              <button type="submit" class="btn contact-btn">Send Message</button>
+              <button type="submit" class="btn btn-nav">Send Message</button>
             </div>
           </form>
         </div>
@@ -306,8 +339,64 @@
 </section>
 
 <!-- Footer -->
-<footer class="py-4 text-center" style="background-color: rgb(22, 22, 22);">
-  <p>&copy; 2025 Your Consulting Co. | All Rights Reserved</p>
+<footer class="text-white pt-5" style="background-color: #000">
+  <div class="container text-center text-md-start">
+      <!-- Let's Talk Block -->
+      <div class="mb-5">
+          <p class="fs-5 fw-light mb-2">
+              We would love to hear from you and collaborate on<br />
+              something that build the world.
+          </p>
+          <h1 class="gradient-text display-1 fw-bold mb-0">
+              Let’s Talk <span class="arrow">↗</span>
+          </h1>
+      </div>
+
+      <hr class="border-secondary my-5" />
+
+      <!-- Footer Columns -->
+      <div class="row text-start">
+          <!-- Company -->
+          <div class="col-md-4 mb-4">
+              <h5 class="fw-bold">Company</h5>
+              <ul class="list-unstyled mt-3">
+                  <li><a href="#" class="footer-link">Our Works</a></li>
+                  <li><a href="#" class="footer-link">About Us</a></li>
+                  <li><a href="#" class="footer-link">Blogs</a></li>
+                  <li><a href="#" class="footer-link">Contact Us</a></li>
+              </ul>
+          </div>
+
+          <!-- Services -->
+          <div class="col-md-4 mb-4">
+              <h5 class="fw-bold">Services</h5>
+              <ul class="list-unstyled mt-3">
+                  <li><a href="#" class="footer-link">Experience Design</a></li>
+                  <li><a href="#" class="footer-link">Website Development</a></li>
+                  <li>
+                      <a href="#" class="footer-link">Mobile App Development</a>
+                  </li>
+                  <li><a href="#" class="footer-link">WordPress development</a></li>
+                  <li><a href="#" class="footer-link">Shopify Development</a></li>
+              </ul>
+          </div>
+
+          <!-- Social -->
+          <div class="col-md-4 mb-4">
+              <h5 class="fw-bold">Follow Us</h5>
+              <div class="d-flex gap-3 mt-3">
+                  <a href="#" class="footer-icon"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#" class="footer-icon"><i class="fab fa-instagram"></i></a>
+                  <a href="#" class="footer-icon"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="#" class="footer-icon"><i class="fab fa-x-twitter"></i></a>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+
+<footer class="text-center py-4 text-light" style="background-color: #000;">
+  <p style="color: white;">&copy; 2025 Dev Infotech. All rights reserved.</p>
 </footer>
 
 <!-- Scripts -->
