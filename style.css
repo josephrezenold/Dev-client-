@@ -548,3 +548,58 @@ img {
     transform: scale(1.02);
     z-index: 1;
 }
+
+
+
+
+
+.card-black {
+    width: 280px; /* fixed width for consistency */
+    height: 380px;
+    background-size: cover;
+    background-position: center;
+    background: #0d0d0d; /* almost black */
+    border: 1px solid #222; /* thin dark border */
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    transition: transform 0.3s ease;
+}
+
+.card-black:hover {
+    background: #1a1a1a; /* a tiny bit lighter on hover */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+}
+
+.card-label {
+    background: rgba(0, 0, 0, 0.6); /* dark label background */
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.card-black h3 {
+    font-family: "Bree Serif", serif; /* matches your fonts */
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.card-black p {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.d-flex {
+    display: flex;
+    flex-wrap: wrap; /* makes the cards move to the next line */
+    justify-content: center; /* center the cards */
+    gap: 20px; /* space between cards */
+    padding: 20px;
+}
+
