@@ -20,12 +20,16 @@ header {
 .card,
 .what-we-do-card,
 .contact-card {
-  background-color: #9ACBD0;
+  background-color: #1A1A1A;
   border: none;
-  color: #2973B2;
+  color: #ffffff;
   box-shadow: 0 0 15px rgba(72, 166, 167, 0.1);
   padding: 5px;
   border-radius: 15px;
+}
+
+#contact{
+  background-color: #000000;
 }
 
 .card:hover,
@@ -33,12 +37,14 @@ header {
   box-shadow: 0 0 25px rgba(72, 166, 167, 0.3);
 }
 
-h2, h4, h5 {
-  color: #2973B2;
+h2, h4 {
+  color: #000000;
 }
 
+h5{color: white;}
+
 p {
-  color: #2973B2;
+  color: #ffffff;
 }
 
 .btn-custom,
@@ -60,17 +66,17 @@ p {
 
 .accordion-item,
 .accordion-button {
-  background-color: #9ACBD0 !important;
-  color: #2973B2 !important;
-  border-color: #48A6A7 !important;
+  background-color: #0D0D0D !important;
+  color: 	#E6E6E6 !important;
+  border-color: #1A1A1A !important;
 }
 
 .accordion-button:focus {
-  box-shadow: 0 0 0 0.2rem rgba(72, 166, 167, 0.3);
+  box-shadow: 0 0 0 0.2rem rgba(127, 132, 132, 0.3);
 }
 
 .accordion-button:not(.collapsed) {
-  background-color: #48A6A7 !important;
+  background-color: #262626 !important;
   color: #F2EFE7 !important;
 }
 
@@ -109,13 +115,6 @@ transform: scale(1.02);
 box-shadow: 0 0 15px rgba(72, 166, 167, 0.4);
 }
 
-.contact-btn {
-background-color: #48A6A7;
-color: white;
-border-radius: 10px;
-padding: 10px 20px;
-transition: background-color 0.3s ease, transform 0.3s ease;
-}
 
 .contact-btn:hover {
 background-color: #2973B2;
@@ -263,3 +262,42 @@ transform: translateY(0);
   font-weight: bold;
   cursor: pointer;
 }
+
+.pad{
+  padding: 25px;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #e50914, #a239ca, #6f42c1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.arrow {
+  font-size: 1em;
+  display: inline-block;
+  transform: translateY(-5px);
+}
+
+.footer-link {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.footer-link:hover {
+  color: #fff;
+}
+
+.footer-icon {
+
+  font-size: 1.25rem;
+  transition: color 0.3s;
+}
+
+.footer-icon:hover {
+  color: #a239ca;
+}
+
