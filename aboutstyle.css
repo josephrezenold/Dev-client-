@@ -59,9 +59,21 @@ p {
   background-color: #2973B2;
 }
 
-.img-icon,
 .team-img {
-  border: 2px solid #2973B2;
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto; /* center the image inside its container */
+}
+
+@media (max-width: 600px) {
+  .team-img {
+    max-width: 100%;
+    height: auto; /* make it proportional on very small screens */
+  }
 }
 
 .accordion-item,
@@ -265,6 +277,36 @@ transform: translateY(0);
 
 .pad{
   padding: 25px;
+}
+
+.section-light {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+}
+
+.section-light h2 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.client-logo {
+  width: 80px; /* set width */
+  height: auto; /* auto height to keep aspect ratio */
+  object-fit: contain; /* makes sure logos don't get stretched */
+  margin: 0 auto;
+  display: block;
+  opacity: 0.85;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.client-logo:hover {
+  transform: scale(1.05);
+  opacity: 1;
 }
 
 .gradient-text {
