@@ -554,12 +554,13 @@ img {
 
 
 .card-black {
-    width: 280px; /* fixed width for consistency */
+    width: 280px;
     height: 380px;
     background-size: cover;
     background-position: center;
-    background: #0d0d0d; /* almost black */
-    border: 1px solid #222; /* thin dark border */
+    background-repeat: no-repeat;
+    background-color: #0d0d0d;
+    border: 1px solid #222;
     border-radius: 16px;
     position: relative;
     overflow: hidden;
@@ -571,9 +572,9 @@ img {
 }
 
 .card-black:hover {
-    background: #1a1a1a; /* a tiny bit lighter on hover */
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-    transform: scale(1.05);
+    background-color: #1a1a1a; /* slightly lighter background */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); /* subtle glow */
+  transform: scale(1.05); /* zoom effect */
 }
 
 .card-label {
