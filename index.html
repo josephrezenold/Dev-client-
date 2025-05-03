@@ -598,6 +598,73 @@
             transform: scale(1.02);
             z-index: 1;
         }
+
+        .weicons{
+    font-size: 45px; 
+    padding: 12px;
+    }
+    
+    .feedback-section {
+    padding: 40px;
+    background-color: #f8f9fa;
+    text-align: center;
+    }
+    
+    .feedback-section h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards 0.2s;
+    }
+    
+    .feedback-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    }
+    
+    .feedback-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeInUp 0.8s forwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .feedback-card:nth-child(1) { animation-delay: 0.3s; }
+    .feedback-card:nth-child(2) { animation-delay: 0.4s; }
+    .feedback-card:nth-child(3) { animation-delay: 0.5s; }
+    .feedback-card:nth-child(4) { animation-delay: 0.6s; }
+    .feedback-card:nth-child(5) { animation-delay: 0.7s; }
+    .feedback-card:nth-child(6) { animation-delay: 0.8s; }
+    
+    .feedback-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    
+    .feedback-card i {
+    font-size: 30px;
+    color: #007BFF;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+    }
+    
+    .feedback-card:hover i {
+    color: #0056b3;
+    }
+    
+    .feedback-card p {
+    font-style: italic;
+    color: #333;
+    }
+
     </style>
 </head>
 
@@ -666,6 +733,43 @@
             </div>
         </div>
     </div>
+
+    <section class="about-us-section">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <!-- Stats -->
+                <div class="col-md-4">
+                    <div class="stat-box mb-4">
+                        <h2 style="color: black">1+</h2>
+                        <p>Finished Projects</p>
+                    </div>
+                    <div class="d-flex">
+                        <div class="stat-box me-3">
+                            <h2 style="color: black">1+</h2>
+                            <p>Happy Clients</p>
+                        </div>
+                        <div class="stat-box">
+                            <h2 style="color: black">10+</h2>
+                            <p>Skilled Team Members</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Center Icon -->
+                
+
+                <!-- About Content -->
+                <div class="col-md-5 containn">
+                    <p class="subtitle">INNOVATING SOLUTIONS</p>
+                    <h2 class="about-heading" style="color:rgb(69, 69, 69)">About Us</h2>
+                    <p class="about-text">
+                        Dev tech is a software development company in Chennai, India, dedicated to helping businesses achieve their digital goals. With a team of experienced professionals and a passion for innovation, we deliver high-quality solutions that drive growth and success.
+                    </p>
+                    <a href="#about" class="btn know-more-btn">Know More</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="why-choose" data-aos="fade-up">
         <h2>Why Choose Us</h2>
@@ -864,67 +968,86 @@
             </div>
         </div>
     </section>
-    <section class="about-us-section">
+
+    <section class="feedback-section">
+        <h2 style="color: #1e3232;;"><i class="fas fa-comment-dots"></i> Client Feedback</h2>
+        <div class="feedback-grid">
+          
+          <div class="feedback-card">
+            <i class="fas fa-user-circle"></i>
+            <p>"Their strategy completely transformed our growth trajectory. Professional, responsive, and insightful!"</p>
+            <div class="client-name">Sarah Mitchell</div>
+            <div class="client-role">CEO, GrowthForge</div>
+          </div>
+      
+          <div class="feedback-card">
+            <i class="fas fa-user-circle"></i>
+            <p>"Thanks to their operational support, we cut costs by 30% and improved our delivery pipeline dramatically."</p>
+            <div class="client-name">Daniel Cho</div>
+            <div class="client-role">COO, NovaLogix</div>
+          </div>
+      
+          <div class="feedback-card">
+            <i class="fas fa-user-circle"></i>
+            <p>"The digital transformation they led was a game-changer. Seamless implementation with real results."</p>
+            <div class="client-name">Priya Desai</div>
+            <div class="client-role">CTO, HelixWare</div>
+          </div>
+      
+          <div class="feedback-card">
+            <i class="fas fa-user-circle"></i>
+            <p>"From start to finish, their team aligned perfectly with our goals. Data-backed decisions that truly worked."</p>
+            <div class="client-name">Liam Turner</div>
+            <div class="client-role">Product Head, QuantumEdge</div>
+          </div>
+      
+          <div class="feedback-card">
+            <i class="fas fa-user-circle"></i>
+            <p>"Thanks to their operational support, we cut costs by 30% and improved our delivery pipeline dramatically."</p>
+            <div class="client-name">Daniel Cho</div>
+            <div class="client-role">COO, NovaLogix</div>
+          </div>
+      
+          <div class="feedback-card">
+            <i class="fas fa-user-circle"></i>
+            <p>"From start to finish, their team aligned perfectly with our goals. Data-backed decisions that truly worked."</p>
+            <div class="client-name">Liam Turner</div>
+            <div class="client-role">Product Head, QuantumEdge</div>
+          </div>
+      
+        </div>
+      </section>
+      
+      <!-- Contact Section -->
+      <section class="contact-section py-5" id="contact">
         <div class="container">
-            <div class="row align-items-center justify-content-between">
-                <!-- Stats -->
-                <div class="col-md-4">
-                    <div class="stat-box mb-4">
-                        <h2 style="color: black">1+</h2>
-                        <p>Finished Projects</p>
-                    </div>
-                    <div class="d-flex">
-                        <div class="stat-box me-3">
-                            <h2 style="color: black">1+</h2>
-                            <p>Happy Clients</p>
-                        </div>
-                        <div class="stat-box">
-                            <h2 style="color: black">10+</h2>
-                            <p>Skilled Team Members</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Center Icon -->
-                
-
-                <!-- About Content -->
-                <div class="col-md-5 containn">
-                    <p class="subtitle">INNOVATING SOLUTIONS</p>
-                    <h2 class="about-heading" style="color:gray">About Us</h2>
-                    <p class="about-text">
-                        Dev tech is a software development company in Chennai, India, dedicated to helping businesses achieve their digital goals. With a team of experienced professionals and a passion for innovation, we deliver high-quality solutions that drive growth and success.
-                    </p>
-                    <a href="#about" class="btn know-more-btn">Know More</a>
-                </div>
+          <h2 class="text-center mb-5 text-light" data-aos="fade-up" style="color: #fbfbfb !important;">Get In Touch</h2>
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div class="contact-card p-4" data-aos="fade-up" style="border-radius: 15px; background-color: #1A1A1A;">
+                <form target="_blank" action="https://formsubmit.co/rezenoldjoseph76@gmail.com" method="POST">
+      
+                  <div class="mb-3">
+                    <label for="name" class="form-label text-light">Name</label>
+                    <input type="text" class="form-control custom-input" id="name" placeholder="Your full name">
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label text-light">Email address</label>
+                    <input type="email" class="form-control custom-input" id="email" placeholder="you@example.com">
+                  </div>
+                  <div class="mb-3">
+                    <label for="message" class="form-label text-light">Message</label>
+                    <textarea class="form-control custom-input" id="message" rows="5" placeholder="How can we help?"></textarea>
+                  </div>
+                  <div class="text-end">
+                    <button type="submit" class="btn btn-nav">Send Message</button>
+                  </div>
+                </form>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
-    <div class="container">
-        <h1 style="font:bolder; padding: 30px;" class="gradient-text display-1 fw-bold"></h1>
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <!-- Card 1 -->
-
-
-                <!-- Card 2 -->
-
-
-                <!-- Card 3 -->
-
-
-                <!-- Card 4 -->
-
-
-                <!-- Card 5 -->
-
-
-                <!-- Card 6 -->
-
-            </div>
-        </div>
-    </div>
-    <hr />
+      </section>
 
     <footer class="text-white pt-5" style="background-color: #000">
         <div class="container text-center text-md-start">
