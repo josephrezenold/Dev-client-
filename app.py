@@ -33,7 +33,7 @@ Contact: {email}
 Message:
 {message_body}"""
 
-    msg = Message("New Contact Form Submission",
+    msg = Message(f"Message from {name} via Devweb Global",
                   sender=app.config['MAIL_USERNAME'],
                   recipients=['feroanmothy666@gmail.com'])  # your email
     msg.body = formatted_message
