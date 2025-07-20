@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us</title>
+  <link rel="icon" href="{{ url_for('static', filename='images/logo-transparent.png') }}" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/aboutstyle.css') }}">
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black px-4 py-4" style="border-bottom:2px solid white;">
+        <a class="navbar-brand" href="{{ url_for('index') }}">
+            <img src="{{ url_for('static', filename='images/logo-black.png') }}" alt="Dev logo" style="height:65px; width:auto; padding: 0; margin: 0;" >
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" style="color: white;" href="{{ url_for('our_works') }}">Our Works</a></li>
+                <li class="nav-item"><a class="nav-link" style="color: white;" href="{{ url_for('about') }}">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" style="color: white;" href="{{ url_for('blogs') }}">Blogs</a></li>
+                <li class="nav-item"><a href="{{ url_for('index') }}#contact"><button class="btn-custom">Speak With Us</button></a></li>
+            </ul>
+        </div>
+    </nav>
+
+<header data-aos="zoom-in-down" data-aos-delay="200" class="section-dark" style="color: white;">
+  <h1>About Us</h1>
+  <p class="lead" style="color: white;">Empowering your business through strategic consulting</p>
+</header>
+
+<!-- Who We Are Section -->
+<section class="section-light py-5" data-aos="fade-right" data-aos-delay="300">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="https://www.mbiofuels.com/images/21686049626.jpg" class="img-fluid rounded" alt="Who We Are">
+      </div>
+      <div class="col-md-6">
+        <h2>Who We Are</h2><br>
+        <p style="color: black;">So, what is Dev? We’re a thriving community for workplace conversations, driven by a simple mission to make worklife better, together.<br><br>
+          But the way we do it? That’s not so simple.<br><br>
+          Every day, we’re inspired to build a healthier, more transparent work community for all. Through the products we make and the communities we create, we’re breaking down barriers that lead to discrimination, pay gaps and toxic work environments. 
+          Together, we’re fostering a world where people have the support and resources they need to make the most of their worklife.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- What We Do Section -->
+<section class="section-dark py-5" data-aos="zoom-in-up" data-aos-delay="400">
+  <div class="container pad">
+    <h2 class="text-center headop mb-4">What We Do</h2>
+    
+    <!-- First Row -->
+    <div class="row text-center">
+      <div class="col-md-4 mb-4" data-aos="flip-left">
+        <div class="what-we-do-card p-4 h-100">
+          <i class="fas fa-chart-line weicons"></i>
+          <h5>Business Strategy</h5>
+          <p>We dive deep into your business model, industry trends, and competitive landscape to craft data-driven strategies that fuel sustainable growth.
+             Whether you're looking to scale, pivot, or optimize, our tailored approach ensures every move is intentional and impactful.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-aos="flip-up">
+        <div class="what-we-do-card p-4 h-100">
+          <i class="fas fa-cogs weicons"></i>
+          <h5>Operational Excellence</h5>
+          <p>We refine your core operations by identifying inefficiencies and implementing streamlined processes that reduce costs and 
+            enhance productivity. From supply chain improvements to workflow automation, we enable your business to run smarter and leaner.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-aos="flip-right">
+        <div class="what-we-do-card p-4 h-100">
+          <i class="fas fa-laptop-code weicons"></i>
+          <h5>Digital Transformation</h5>
+          <p>We guide your business through the digital shift by integrating modern technologies that align with your goals. Whether 
+            it's automating manual processes, adopting cloud solutions, 
+            or leveraging data analytics, we ensure your tech investments deliver measurable results.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Row -->
+    <div class="row text-center mt-4">
+      <div class="col-md-4 mb-4" data-aos="flip-left">
+        <div class="what-we-do-card p-4 h-100">
+          <i class="fas fa-bullhorn weicons"></i>
+          <h5>Marketing Strategy</h5>
+          <p>We craft compelling marketing campaigns that connect with your audience, drive engagement, and build lasting brand loyalty across all digital channels.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-aos="flip-up">
+        <div class="what-we-do-card p-4 h-100">
+          <i class="fas fa-shield-alt weicons"></i>
+          <h5>Risk Management</h5>
+          <p>We assess your potential risks and develop proactive strategies that protect your business, ensuring continuity and resilience against unexpected challenges.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-aos="flip-right">
+        <div class="what-we-do-card p-4 h-100">
+          <i class="fas fa-lightbulb weicons"></i>
+          <h5>Innovation Consulting</h5>
+          <p>We unlock creativity within your teams, helping you ideate, prototype, and launch innovative products and services that set you apart from competitors.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Our Clients -->
+<section class="section-light py-5">
+  <div class="container">
+    <h2 class="text-center mb-5" data-aos="fade-up">Our Clients</h2>
+    <div class="row text-center" data-aos="fade-up" data-aos-delay="200">
+     
+      <div class="client-box">
+        <img src="https://bashahoney.com/wp-content/uploads/2024/11/Basha-Honey-Logo-3-1.png" alt="Amazon Web Services" class="bhasha" />
+    </div>
+
+    </div>
+    <div class="row text-center" data-aos="fade-up" data-aos-delay="200">
+     
+    </div>
+  </div>
+</section>
+
+<!-- Driving Force -->
+<section class="section-dark py-5" data-aos="fade-up">
+  <div class="container pad">
+    <h2 class="text-center headop mb-5">Our Driving Force</h2>
+    <div class="row text-center">
+      <div class="col-md-4" data-aos="flip-left">
+        <div class="card what-we-do-card">
+          <h5>Client-Centric Vision</h5>
+          <p>Your goals are our compass. We ensure every project is aligned with your business objectives, 
+            delivering not just results—but real, measurable impact. Our success is defined by the value we create for you..</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="flip-up">
+        <div class="card what-we-do-card">
+          <h5>Innovation First</h5>
+          <p>We don’t just keep up with trends—we set them. Our team embraces bold, forward-thinking ideas to develop unique
+             solutions that give you a clear edge in a rapidly evolving market.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="flip-right">
+        <div class="card what-we-do-card">
+          <h5>Data-Driven Excellence</h5>
+          <p>Every decision we make is grounded in data. By combining analytics with deep business insight, we help you make smarter moves,
+             reduce risk, and maximize performance across the board.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section-light py-5" id="faq">
+  <div class="container">
+    <h2 class="text-center mb-4">FAQs</h2>
+    <div class="accordion accordion-flush" id="faqAccordion" data-aos="fade-up">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+            What services does your consulting company offer?
+          </button>
+        </h2>
+        <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            We offer tailored consulting services across areas including business strategy, marketing, operations, technology solutions, and organizational development. Our goal is to help you overcome challenges, streamline processes, and achieve sustainable growth.
+
+
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+            How does the consultation process work?
+          </button>
+        </h2>
+        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Our process typically involves an initial discovery session, followed by an in-depth analysis of your needs. We then create a customized strategy and work closely with you on implementation, monitoring progress, and adjusting as needed.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+            Who will I work with during the consultation?
+          </button>
+        </h2>
+        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            You will be paired with a dedicated consultant or a team of specialists based on your project’s specific needs. Our consultants have extensive industry experience and are committed to delivering actionable insights.
+
+
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+            How much do your consulting services cost?
+          </button>
+        </h2>
+        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Pricing varies depending on the project's scope, complexity, and duration. After the initial consultation, we provide a transparent proposal outlining the fees and deliverables. We offer both hourly rates and project-based pricing.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Meet the Team -->
+<section class="section-dark py-5" data-aos="fade-up" data-aos-delay="500">
+  <div class="container">
+    <h2 class="text-center mb-5" style="color: white;">Meet the Team</h2>
+    <div class="container d-flex justify-content-center align-items-center" >
+      <div class="row text-center">
+          <h4 style="color: white;">Shym – Founder & CEO</h4>
+          <p style="color: white;">With over 4 years in business strategy, <br>Shym has led transformational projects across multiple industries.</p>  
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<section class="feedback-section">
+  <h2 style="color: #1e3232;;"><i class="fas fa-comment-dots"></i> Client Feedback</h2>
+  <div class="feedback-grid">
+    
+    <div class="feedback-card">
+      <i class="fas fa-user-circle"></i>
+      <p>"Their strategy completely transformed our growth trajectory. Professional, responsive, and insightful!"</p>
+      <div class="client-name">Sarah Mitchell</div>
+      <div class="client-role">CEO, GrowthForge</div>
+    </div>
+
+    <div class="feedback-card">
+      <i class="fas fa-user-circle"></i>
+      <p>"Thanks to their operational support, we cut costs by 30% and improved our delivery pipeline dramatically."</p>
+      <div class="client-name">Daniel Cho</div>
+      <div class="client-role">COO, NovaLogix</div>
+    </div>
+
+    <div class="feedback-card">
+      <i class="fas fa-user-circle"></i>
+      <p>"The digital transformation they led was a game-changer. Seamless implementation with real results."</p>
+      <div class="client-name">Priya Desai</div>
+      <div class="client-role">CTO, HelixWare</div>
+    </div>
+
+    <div class="feedback-card">
+      <i class="fas fa-user-circle"></i>
+      <p>"From start to finish, their team aligned perfectly with our goals. Data-backed decisions that truly worked."</p>
+      <div class="client-name">Liam Turner</div>
+      <div class="client-role">Product Head, QuantumEdge</div>
+    </div>
+
+    <div class="feedback-card">
+      <i class="fas fa-user-circle"></i>
+      <p>"Thanks to their operational support, we cut costs by 30% and improved our delivery pipeline dramatically."</p>
+      <div class="client-name">Daniel Cho</div>
+      <div class="client-role">COO, NovaLogix</div>
+    </div>
+
+    <div class="feedback-card">
+      <i class="fas fa-user-circle"></i>
+      <p>"From start to finish, their team aligned perfectly with our goals. Data-backed decisions that truly worked."</p>
+      <div class="client-name">Liam Turner</div>
+      <div class="client-role">Product Head, QuantumEdge</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section py-5" id="contact">
+  <div class="container">
+    <h2 class="text-center mb-5 text-light" data-aos="fade-up" style="color: #fbfbfb !important;">Get In Touch</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="contact-card p-4" data-aos="fade-up" style="border-radius: 15px; background-color: #1A1A1A;">
+          <form id="contactForm" action="/send-email" method="POST">
+
+            <div class="mb-3">
+              <label for="name" class="form-label text-light">Name</label>
+              <input type="text" name="name" class="form-control custom-input" id="name" placeholder="Your full name">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label text-light">Email address</label>
+              <input type="email" name="email" class="form-control custom-input" id="email" placeholder="you@example.com">
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label text-light">Message</label>
+              <textarea name="message" class="form-control custom-input" id="message" rows="5" placeholder="How can we help?"></textarea>
+            </div>
+            <div class="text-end">
+              <button type="submit" class="btn btn-nav">Send Message</button>
+            </div>
+
+            <div id="result"></div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-white pt-5" style="background-color: #000">
+  <div class="container text-center text-md-start">
+      <!-- Let's Talk Block -->
+      <div class="mb-5">
+          <p class="fs-5 fw-light mb-2">
+              We would love to hear from you and collaborate on<br />
+              something that build the world.
+          </p>
+          <h1 class="gradient-text display-1 fw-bold mb-0">
+              Let’s Talk <span class="arrow">↗</span>
+          </h1>
+      </div>
+
+      <hr class="border-secondary my-5" />
+
+      <!-- Footer Columns -->
+      <div class="row text-start">
+          <!-- Company -->
+          <div class="col-md-4 mb-4">
+              <h5 class="fw-bold">Company</h5>
+              <ul class="list-unstyled mt-3">
+                  <li><a href="our works.html" class="footer-link">Our Works</a></li>
+                  <li><a href="about.html" class="footer-link">About Us</a></li>
+                  <li><a href="blog.html" class="footer-link">Blogs</a></li>
+                  <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+              </ul>
+          </div>
+
+          <!-- Services -->
+          <div class="col-md-4 mb-4">
+              <h5 class="fw-bold">Services</h5>
+              <ul class="list-unstyled mt-3">
+                  <li><a href="#" class="footer-link">Mobile App Development</a></li>
+                  <li><a href="#" class="footer-link">Web Development</a></li>
+                  <li>
+                      <a href="#" class="footer-link">AI / ML</a>
+                  </li>
+                  <li><a href="#" class="footer-link">Digital Marketing</a></li>
+                  <li><a href="#" class="footer-link">Branding</a></li>
+                  <li><a href="#" class="footer-link">UI/UX Design</a></li>
+                  <li><a href="#" class="footer-link">Technical Support</a></li>
+              </ul>
+          </div>
+
+          </div>
+      </div>
+  </div>
+</footer>
+
+<footer class="text-center py-4 text-light" style="background-color: #000;">
+  <p style="color: white;">&copy; 2025 DevTechnologies. All rights reserved by techanolds.</p>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="{{ url_for('static', filename='scripts/app.js') }}"></script>
+
+<script>
+  AOS.init();
+
+  function toggleExtra() {
+    const info = document.getElementById('extra-info');
+    info.style.display = (info.style.display === 'none' || info.style.display === '') ? 'block' : 'none';
+  }
+</script>
+
+</body>
+  </html>

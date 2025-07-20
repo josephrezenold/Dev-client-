@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <link rel="icon" href="logo transparent.png" type="image/png">
-    <title>Our Services</title>
+    <link rel="icon" href="{{ url_for('static', filename='images/logo-transparent.png') }}" type="image/png">
+    <title>Blogs</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
 
     <style>
         html {
@@ -132,38 +132,43 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-black px-4 py-4" style="border-bottom:2px solid white ;">
-        <a class="navbar-brand" href="index.html">
-            <img src="logo-black.png" alt="Dev Logo" style="height:65px; width:auto; padding: 0; margin: 0;" />
+        <a class="navbar-brand" href="{{ url_for('index') }}">
+            <img src="{{ url_for('static', filename='images/logo-black.png') }}" alt="Dev logo" style="height:65px; width:auto; padding: 0; margin: 0;" >
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link"  style="color: white;" href="our works.html">Our Works</a></li>
-                <li class="nav-item"><a class="nav-link" style="color: white;"  href="about.html">About Us</a></li>
-                <li class="nav-item"><a class="nav-link"  style="color: white;" href="blog.html">Blogs</a></li>
                 <li class="nav-item">
-                    <a href="#contact"><button class="btn-custom">Speak With Us</button></a>
+                <a class="nav-link" style="color: white;" href="{{ url_for('our_works') }}">Our Works</a>
                 </li>
+                <li class="nav-item">
+                <a class="nav-link" style="color: white;" href="{{ url_for('about') }}">About Us</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" style="color: white;" href="{{ url_for('blogs') }}">Blogs</a>
+                </li>
+                <li class="nav-item">
+                <a href="{{ url_for('index') }}#contact"><button class="btn-custom">Speak With Us</button></a>
+                </li>
+
             </ul>
         </div>
     </nav>
 
     <div class="container" style="padding: 30px;">
-        <h1 style="text-align: center;">Our Services</h1>
+        <h1 style="text-align: center;">Our Blog</h1>
 
         <div class="row g-4">
             <div class="col-12 col-md-6">
                 <div class="blog-card">
-                    <div class="blog-image"><img src="https://www.qualitydevs.com/wp-content/uploads/2021/03/Desarrollo-apps-moviles.jpg" alt="Artificial Intelligence" class="header-image"></div>
+                    <div class="blog-image"><img src="https://live-production.wcms.abc-cdn.net.au/18e570bbac2ada7350601b6875ea5d1e?impolicy=wcms_crop_resize&cropH=576&cropW=1024&xPos=0&yPos=0&width=862&height=485" alt="Artificial Intelligence" class="header-image"></div>
                     <div class="blog-content">
-                        <h2>Mobile App Development</h2>
-                        <p>Creating powerful mobile applications for Android and iOS. Our
-                            team specializes in delivering feature-rich, user-friendly apps
-                            that scale.</p>
+                        <h2>The Rise of Artificial Intelligence</h2>
+                        <p>This is a short description for the first blog post about tech and design.</p>
                         <div class="read-more">
-                            <a href="services page/mobileapp.html"><button>Read More</button></a>
+                            <a href="{{ url_for('blog1') }}"><button>Read More</button></a>
                         </div>
                     </div>
                 </div>
@@ -171,14 +176,13 @@
 
             <div class="col-12 col-md-6">
                 <div class="blog-card">
-                    <div class="blog-image"><img src="https://www.digitalauthority.me/wp-content/uploads/2023/06/shutterstock_413480872-1.jpg" alt="Metaverse World" class="header-image">
+                    <div class="blog-image"><img src="https://assets.techrepublic.com/uploads/2023/02/tr2627-what-is-metaverse.jpeg" alt="Metaverse World" class="header-image">
                     </div>
                     <div class="blog-content">
-                        <h2>Web Development</h2>
-                        <p>Our web app development services aim to improve your company's operations through the development of reliable, scalable, and secure 
-                            applications. We offer the skills and expertise needed needed to deliver outstanding results, whether we're creating business solutions or custom web-based applications.</p>
+                        <h2>Exploring the Metaverse</h2>
+                        <p>This is a short description for the second blog post about creativity and growth.</p>
                         <div class="read-more">
-                            <a href="services page/web dev.html"><button>Read More</button></a>
+                            <a href="{{ url_for('blog2') }}"><button>Read More</button></a>
                         </div>
                     </div>
                 </div>
@@ -186,14 +190,13 @@
 
             <div class="col-12 col-md-6">
                 <div class="blog-card">
-                    <div class="blog-image">  <img src="https://cubettech.com/wp-content/uploads/2021/01/Does-AI-ML-makes-decision-making-efficient_.jpg" alt="Quantum Computing" class="header-image">
+                    <div class="blog-image">  <img src="https://gmo-research.ai/en/application/files/5716/6080/5815/Quantum_Computing_Image.png" alt="Quantum Computing" class="header-image">
                     </div>
                     <div class="blog-content">
-                        <h2>AI / ML</h2>
-                        <p>Leverage the power of artificial intelligence and machine learning to drive innovation and gain a competitive edge. Our AI and ML services include data analysis, NLP, 
-                            custom algorithms, and AI-powered automation to transform your business operations.</p>
+                        <h2>The Future of Quantum Computing</h2>
+                        <p>This is a short description for the third blog post about portfolio building.</p>
                         <div class="read-more">
-                            <a href="services page/AIML.html"><button>Read More</button></a>
+                            <a href="{{ url_for('blog3') }}"><button>Read More</button></a>
                         </div>
                     </div>
                 </div>
@@ -201,75 +204,40 @@
 
             <div class="col-12 col-md-6">
                 <div class="blog-card">
-                    <div class="blog-image"><img src="https://laseractionplus.com/wp-content/uploads/2024/04/SaaS.jpeg" alt="Cybersecurity" class="header-image"></div>
+                    <div class="blog-image"><img src="https://www.skillcast.com/hubfs/Blog_Images/2107_Blogs/cybersecurity-tips-1200-627.jpg" alt="Cybersecurity" class="header-image"></div>
                     <div class="blog-content">
-                        <h2>SaaS Solutions</h2>
-                        <p> Develop scalable, secure, and user-friendly SaaS applications with Dev Infotech. We specialize in multi-tenant architecture, 
-                            API development, subscription management, and ensuring compliance with industry standards.</p>
+                        <h2>Cybersecurity in a Digital World</h2>
+                        <p>This is a short description for the fourth blog post about productivity tips.</p>
                         <div class="read-more">
-                            <a href="services page/saas.html"><button>Read More</button></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6">
-                <div class="blog-card">
-                    <div class="blog-image"><img src="https://www.widgrid.com.br/source/files/c/630/marketing_digital_basico-094172_1254-836-0-0.jpg" alt="Cybersecurity" class="header-image"></div>
-                    <div class="blog-content">
-                        <h2>Digital Marketing</h2>
-                        <p> Our digital marketing services, like SEO, PPC, social media marketing, and content marketing, will help you improve your online visibility. 
-                            You may reach your target audience and increase conversions with the aid of our data-driven methods.</p>
-                        <div class="read-more">
-                            <a href="services page/digital mark.html"><button>Read More</button></a> 
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6">
-                <div class="blog-card">
-                    <div class="blog-image"><img src="https://tse3.mm.bing.net/th?id=OIP.aVbdt1WLgGrqWakzzRD8QQHaEK&pid=Api&P=0&h=180" alt="Cybersecurity" class="header-image"></div>
-                    <div class="blog-content">
-                        <h2>Branding</h2>
-                        <p>To help you in creating an effective and lasting brand presence, Dev Infotech offers complete branding services. We develop an integrated personality that speaks to those you want to reach, starting with brand 
-                            strategy and ending with logo design and content.</p>
-                        <div class="read-more">
-                            <a href="services page/branding.html"><button>Read More</button></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6">
-                <div class="blog-card">
-                    <div class="blog-image"><img src="https://skipsuniversity.edu.in/wp-content/uploads/2024/05/101_ux_vs_ui_illustration_blog.png" alt="Cybersecurity" class="header-image"></div>
-                    <div class="blog-content">
-                        <h2>UI/UX Design</h2>
-                        <p>Intuitive interfaces and user flows that boost engagement and
-                            usability.</p>
-                        <div class="read-more">
-                            <a href="services page/uiux.html"><button>Read More</button></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6">
-                <div class="blog-card">
-                    <div class="blog-image"><img src="https://img.freepik.com/premium-vector/technical-support-button-closeup-finger-about-press-button-customer-help-tech-support-customer-service-business-technology-concept_127544-1504.jpg" alt="Cybersecurity" class="header-image"></div>
-                    <div class="blog-content">
-                        <h2>Technical Support</h2>
-                        <p>Reliable support teams to troubleshoot, maintain, and optimize
-                            your software and systems.</p>
-                        <div class="read-more">
-                            <a href="services page/tech sup.html"><button>Read More</button></a>
+                            <a href="{{ url_for('blog4') }}"><button>Read More</button></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- Blog Details Section 
+        <div id="blog1" class="blog-detail">
+            <h2>Blog 1: Exploring Tech and Design</h2>
+            <p>Here is the full detailed article about how technology and design come together to create amazing experiences. Explore the trends, tools, and future of creative tech projects.</p>
+        </div>
+
+        <div id="blog2" class="blog-detail">
+            <h2>Blog 2: Unlocking Creativity and Personal Growth</h2>
+            <p>In this article, you will learn methods to boost your creativity and personal growth through daily habits, innovative practices, and mindset shifts.</p>
+        </div>
+
+        <div id="blog3" class="blog-detail">
+            <h2>Blog 3: Building a Strong Portfolio</h2>
+            <p>Learn how to create an outstanding portfolio that grabs the attention of clients and employers, including design tips, project selection, and branding advice.</p>
+        </div>
+
+        <div id="blog4" class="blog-detail">
+            <h2>Blog 4: Productivity Tips for Creatives</h2>
+            <p>This article shares practical productivity hacks for developers, designers, and freelancers to stay focused, organized, and ahead of deadlines.</p>
+        </div>
+
+    </div> -->
     <br><br>
     <footer class="text-white pt-5" style="background-color: #000;">
         <div class="container text-center text-md-start">
