@@ -1,46 +1,45 @@
 from flask import Flask, request, render_template
-from flask_mail import Mail, Message
+from twilio.rest import Client
 
-app = Flask(__name__)  # looks for index.html in same folder
+app = Flask(__name__)
 
 # -------------------
-# MAIL CONFIG
+# TWILIO CONFIG
 # -------------------
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-app.config['MAIL_PORT'] = 587
-app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'feroanmothy666@gmail.com'     # your email
-app.config['MAIL_PASSWORD'] = 'feiu btxy jgzq sdzz'            # your Gmail App Password
+account_sid = 'your_account_sid'
+auth_token = 'your_auth_token'
+from_whatsapp_number = 'whatsapp:+918939843825'  # Twilio Sandbox number
+to_whatsapp_number = 'whatsapp:+917358113731'   # Your verified WhatsApp number
 
-mail = Mail(app)
+client = Client(account_sid, auth_token)
 
 # -------------------
 # ROUTES
 # -------------------
 @app.route('/')
 def index():
-    return render_template('index.html')  # serves your existing index.html
+    return render_template('index.html')
 
-@app.route('/send-email', methods=['POST'])
-def send_email():
+@app.route('/send-whatsapp', methods=['POST'])
+def send_whatsapp():
     name = request.form.get('name')
     email = request.form.get('email')
     message_body = request.form.get('message')
 
-    formatted_message = f"""Name: {name}
-Contact: {email}
+    formatted_message = f"""New Contact Form Submission:
 
-Message:
-{message_body}"""
+Name: {name}
+Email: {email}
+Message: {message_body}
+"""
 
-    msg = Message(f"Message from {name} via Devweb Global",
-                  sender=app.config['MAIL_USERNAME'],
-                  recipients=['feroanmothy666@gmail.com'])  # your email
-    msg.body = formatted_message
+    message = client.messages.create(
+        body=formatted_message,
+        from_=from_whatsapp_number,
+        to=to_whatsapp_number
+    )
 
-    mail.send(msg)
-
-    return "OK"
+    return "Message sent via WhatsApp"
 
 @app.route('/our-works')
 def our_works():
